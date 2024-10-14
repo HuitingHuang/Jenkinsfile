@@ -56,7 +56,7 @@ node {
             
             stage("Archive"){
                 try {
-                    archiveArtifacts artifacts: "cypress/reports/html/index.html", allowEmptyArchive: 'true'
+                    archiveArtifacts artifacts: "cypress/reports/html/index.html", onlyIfSuccessful: false
                     
                     publishHTML([
                         allowMissing: false, 
@@ -68,7 +68,7 @@ node {
                         reportTitles: '', 
                         useWrapperFileDirectly: true
                     ])
-                } catch (err) {
+                } catch (e) {
                     echo "Caught: ${e}"
                     currentBuild.result = 'FAILURE'
                 }
