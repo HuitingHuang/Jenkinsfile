@@ -1,6 +1,6 @@
 # Jenkinsfile
 
-The Jenkinsfile to run E2E tests from [cypress-demo](https://github.com/HuitingHuang/cypress-demo.git)
+The Jenkinsfile on [cypress-tests](https://github.com/HuitingHuang/Jenkinsfile/tree/cypress-tests) branch to run E2E tests from [cypress-demo](https://github.com/HuitingHuang/cypress-demo.git)
 
 The Jenkins pipeline can be parameterized to decide:
 <br>- on which browser to run tests
